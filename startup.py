@@ -13,7 +13,10 @@ flux = Path("M:/Software/installers/flux-setup.exe")
 github = Path("M:/Software/installers/github-setup.exe")
 obsidian = Path("M:/Software/installers/obsidian-setup.exe")
 
-os.system('setx /M /U PATH "%PATH%;C:\\Users\\s2202694\\Downloads"')
+os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /USER')
+os.system('pathed /APPEND "M:\\Software\\lazygit" /USER')
+os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\python portable" /USER')
+os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /USER')
 
 # path = "C:\\Users\\s2202694\\Downloads;"
 # os.environ['Path'] += ':'+path
