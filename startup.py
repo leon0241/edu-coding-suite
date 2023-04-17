@@ -13,13 +13,14 @@ flux = Path("M:/Software/installers/flux-setup.exe")
 github = Path("M:/Software/installers/github-setup.exe")
 obsidian = Path("M:/Software/installers/obsidian-setup.exe")
 
-os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /USER')
-os.system('pathed /APPEND "M:\\Software\\lazygit" /USER')
-os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\python portable" /USER')
-os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /USER')
+os.system('GTools\\pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /USER')
+os.system('GTools\\pathed /APPEND "M:\\Software\\lazygit" /USER')
+os.system('GTools\\pathed /APPEND "C:\\Users\\s2202694\\Downloads\\python portable" /USER')
+os.system('GTools\\pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /USER')
 
 # path = "C:\\Users\\s2202694\\Downloads;"
 # os.environ['Path'] += ':'+path
+
 # os.environ['Path'] = os.environ['Path']
 # print(os.environ["PATH"])
 
@@ -41,4 +42,4 @@ os.system('pathed /APPEND "C:\\Users\\s2202694\\Downloads\\PortableGit\\bin" /US
 
 # # extract python and vscode
 # shutil.unpack_archive(vscode_destination, vscode_extract)
-# shutil.unpack_archive(python_destination, python_extract)
+# shutil.unpack_archive(python_destination, python_extracT)
