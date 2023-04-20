@@ -4,13 +4,16 @@ import subprocess
 from pathlib import Path
 import shutil
 
+# config variables
 import py_config
 
 def change_background(path: Path):
-    # set wallpaper from path
+    """Sets a wallpaper from a path"""
     ctypes.windll.user32.SystemParametersInfoW(20, 0, str(path), 0)
 
 def install_software(path: Path):
+    """Runs an installer for a software"""
+    
     # call software at the path
     try:
         subprocess.call(path)
@@ -18,39 +21,61 @@ def install_software(path: Path):
         raise Exception("Cannot call " + str(path))
 
 def copy_file(path: Path, extract_folder: Path):
+    """Copies a file from one location to another"""
+    
     # get file name e.g. vscode.zip
-    print(path)
-    file_name_ext = path.name
-    
-    # get extract folder and append file name
-    # e.g. downloads/vscode.zip
-    copy_destination = extract_folder / file_name_ext
-    
-    # copy from original to new
-    shutil.copy(path, copy_destination)
+    try:
+        file_name_ext = path.name
+        
+        # get extract folder and append file name
+        # e.g. downloads/vscode.zip
+        copy_destination = extract_folder / file_name_ext
+        
+        # copy from original to new
+        shutil.copy(path, copy_destination)
+    except:
+        raise Exception("Cannot copy " + str(path))
 
 def extract_file(path: Path, extract_folder: Path):
-    # get file title for folder e.g. vscode
-    file_name = path.stem
+    """Extracts a file using shutil unpack"""
+    
+    try:
+        # get file title for folder e.g. vscode
+        file_name = path.stem
 
-    # get extract folder and append folder name
-    # e.g. downloads/vscode (folder)
-    extract_location = extract_folder / file_name
+        # get extract folder and append folder name
+        # e.g. downloads/vscode (folder)
+        extract_location = extract_folder / file_name
 
-    # extract to new location
-    shutil.unpack_archive(path, extract_location)
+        # extract to new location
+        shutil.unpack_archive(path, extract_location)
+    except:
+        raise Exception("Cannot extract " + str(path))
 
 def set_path_variable(path: str, pathed_loc: str):
-    # e.g. Gtools\pathed /APPEND "M:\Software\lazygit" /USER
-    os.system(pathed_loc + ' /APPEND "' + path + '" /USER')
+    """Add a local PATH variable using pathed CLI tool"""
+
+    try:
+        # e.g. Gtools\pathed /APPEND "M:\Software\lazygit" /USER
+        os.system(pathed_loc + ' /APPEND "' + path + '" /USER')
+    except:
+        raise Exception("Cannot set PATH of " + path)
 
 def transform_path(path: str):
-    '''Turn strings into path objects'''
-    return Path(path)
+    """Turn strings into path objects"""
+
+    try:
+        return Path(path)
+    except:
+        raise Exception("Cannot transform file with path " + path)
 
 def posix_to_win_str(path: str):
-    '''Turn forward slashes into double backslashes'''
-    return path.replace("/", "\\")
+    """Turn forward slashes into double backslashes"""
+    
+    try:
+        return path.replace("/", "\\")
+    except:
+        raise Exception("Cannot transform file with path " + path)
 
 WALLPAPER = transform_path(py_config.WALLPAPER)
 
