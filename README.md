@@ -1,9 +1,12 @@
 ### Portable suite for Edinburgh University computers
 
-#### Instructions
-- Download the files you need into the network drive
-  
-  ![img](https://i.imgur.com/WjQI84y.png)
+Features:
+- Set wallpaper
+- Extract files to a location
+- Set local PATH variables
+- Run installers
 
-- Copy files into Downloads (this is on C:\ drive)
-- Extract and enjoy :D 
+#### Instructions
+- Modify py_config.py to your liking
+- Run program
+- (possibly) put it in the startup folder
