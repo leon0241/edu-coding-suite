@@ -21,5 +21,5 @@ EXTRACT_FOLDER = "C:/Users/s2202694/Downloads"
 
 EXTRACTS = {
     # "vscode": "M:/Software/VSCode Portable.zip",
-    "python": "M:/Software/python portable2.zip"
+    "python": "M:/Software/python portable.zip"
 }
