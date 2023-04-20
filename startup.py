@@ -103,19 +103,19 @@ def main():
     copy_file(PORTABLE_GIT, EXTRACT_FOLDER)
     install_software(EXTRACT_FOLDER / PORTABLE_GIT.name)    
     
-    # print("Copying Archives..")
-    # for path in EXTRACTS:
-    #     copy_file(path, EXTRACT_FOLDER)
+    print("Copying Archives..")
+    for path in EXTRACTS:
+        copy_file(path, EXTRACT_FOLDER)
     
-    # print("Extracting Archives..")
-    # for path in EXTRACTS:
-    #     extract_file(path, EXTRACT_FOLDER)
+    print("Extracting Archives..")
+    for path in EXTRACTS:
+        extract_file(path, EXTRACT_FOLDER)
 
     print("Setting PATH Variables..")
     for link in PATH_LINKS:
         set_path_variable(link, PATHED_LOC)
     
-    remove_stupid_windows_path(PATHED_LOC)
+    # remove_stupid_windows_path(PATHED_LOC)
     
     print("Finished!")
 

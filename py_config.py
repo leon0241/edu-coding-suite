@@ -6,8 +6,8 @@ PATHED_LOC = "Gtools/pathed"
 PATH_LINKS = {
     "git": "C:/Users/s2202694/Downloads/PortableGit/bin",
     "lazygit": "M:/Software/lazygit",
-    "python": "C:/Users/s2202694/Downloads/python portable",
-    "python pip": "C:/Users/s2202694/Downloads/python portable"
+    "python": "C:/Users/s2202694/Downloads/python-portable",
+    "python pip": "C:/Users/s2202694/Downloads/python-portable/Scripts"
 }
 
 INSTALLERS = {
@@ -21,6 +21,6 @@ PORTABLE_GIT = "M:/Software/installers/portablegit.exe"
 EXTRACT_FOLDER = "C:/Users/s2202694/Downloads"
 
 EXTRACTS = {
-    # "vscode": "M:/Software/archives/VSCode Portable.zip",
+    "vscode": "M:/Software/archives/VSCode Portable.zip",
     "python": "M:/Software/archives/python-portable.zip"
 }
