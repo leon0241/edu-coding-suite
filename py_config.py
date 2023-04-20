@@ -11,9 +11,9 @@ PATH_LINKS = {
 }
 
 INSTALLERS = {
-    # "flux": "M:/Software/installers/flux-setup.exe",
-    # "github": "M:/Software/installers/github-setup.exe",
-    # "obsidian": "M:/Software/installers/obsidian-setup.exe"
+    "flux": "M:/Software/installers/flux-setup.exe",
+    "github": "M:/Software/installers/github-setup.exe",
+    "obsidian": "M:/Software/installers/obsidian-setup.exe"
 }
 
 PORTABLE_GIT = "M:/Software/installers/portablegit.exe"
