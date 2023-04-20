@@ -61,6 +61,9 @@ def set_path_variable(path: str, pathed_loc: str):
     except:
         raise Exception("Cannot set PATH of " + path)
 
+def remove_stupid_windows_path(pathed_loc):
+    os.system(pathed_loc + ' /USER /REMOVE 00')
+
 def transform_path(path: str):
     """Turn strings into path objects"""
 
@@ -89,7 +92,6 @@ PORTABLE_GIT = transform_path(py_config.PORTABLE_GIT)
 EXTRACT_FOLDER = transform_path(py_config.EXTRACT_FOLDER)
 EXTRACTS = [transform_path(path) for path in py_config.EXTRACTS.values()]
 
-
 def main():
     print("Changing background..")
     change_background(WALLPAPER)
@@ -101,17 +103,19 @@ def main():
     copy_file(PORTABLE_GIT, EXTRACT_FOLDER)
     install_software(EXTRACT_FOLDER / PORTABLE_GIT.name)    
     
-    print("Copying Archives..")
-    for path in EXTRACTS:
-        copy_file(path, EXTRACT_FOLDER)
+    # print("Copying Archives..")
+    # for path in EXTRACTS:
+    #     copy_file(path, EXTRACT_FOLDER)
     
-    print("Extracting Archives..")
-    for path in EXTRACTS:
-        extract_file(path, EXTRACT_FOLDER)
+    # print("Extracting Archives..")
+    # for path in EXTRACTS:
+    #     extract_file(path, EXTRACT_FOLDER)
 
     print("Setting PATH Variables..")
     for link in PATH_LINKS:
         set_path_variable(link, PATHED_LOC)
+    
+    remove_stupid_windows_path(PATHED_LOC)
     
     print("Finished!")
 
