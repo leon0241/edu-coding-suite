@@ -95,8 +95,8 @@ def main():
     change_background(WALLPAPER)
     
     print("Installing Software..")
-    # for path in INSTALLERS:
-    #     install_software(path)
+    for path in INSTALLERS:
+        install_software(path)
 
     copy_file(PORTABLE_GIT, EXTRACT_FOLDER)
     install_software(EXTRACT_FOLDER / PORTABLE_GIT.name)    
