@@ -115,7 +115,7 @@ def main():
     for link in PATH_LINKS:
         set_path_variable(link, PATHED_LOC)
     
-    # remove_stupid_windows_path(PATHED_LOC)
+    remove_stupid_windows_path(PATHED_LOC)
     
     print("Finished!")
 
