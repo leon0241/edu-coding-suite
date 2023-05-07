@@ -10,6 +10,7 @@ Features:
 - Modify `py_config.py` to your liking
 - Run `compile.exe` (you will need python for this - check links to basic functions)
 - Your startup file will run now with `startup.exe`
+- If you want to move the startup.exe somewhere, you will need to move GTools as well (If you are adding PATH configurations)
 
 #### My Configuration
 **Installers**
