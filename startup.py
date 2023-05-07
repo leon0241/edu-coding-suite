@@ -4,6 +4,9 @@ import subprocess
 from pathlib import Path
 import shutil
 
+import screeninfo
+print()
+
 # config variables
 import py_config
 
@@ -62,6 +65,7 @@ def set_path_variable(path: str, pathed_loc: str):
         raise Exception("Cannot set PATH of " + path)
 
 def remove_stupid_windows_path(pathed_loc):
+    '''Delete a dumb windows feature that makes it so u can't run python from CLI'''
     os.system(pathed_loc + ' /USER /REMOVE 00')
 
 def transform_path(path: str):
@@ -80,7 +84,14 @@ def posix_to_win_str(path: str):
     except:
         raise Exception("Cannot transform file with path " + path)
 
-WALLPAPER = transform_path(py_config.WALLPAPER)
+# if there are two wallpapers listed then set them individually
+if len(py_config.WALLPAPER == 2):
+    SINGLE_WALLPAPER = transform_path(py_config.WALLPAPER[0])
+    DUAL_WALLPAPER = transform_path(py_config.WALLPAPER[1])
+# if there is only one wallpaper then set them both to the same one
+else:
+    SINGLE_WALLPAPER = transform_path(py_config.WALLPAPER[0])
+    DUAL_WALLPAPER = transform_path(py_config.WALLPAPER[0])
 
 # needs CLI interaction to add to path so you can't just use Path objects
 PATHED_LOC = posix_to_win_str(py_config.PATHED_LOC)
@@ -94,7 +105,10 @@ EXTRACTS = [transform_path(path) for path in py_config.EXTRACTS.values()]
 
 def main():
     print("Changing background..")
-    change_background(WALLPAPER)
+    if (len(screeninfo.get_monitors())) == 1:
+        change_background(SINGLE_WALLPAPER)
+    else:
+        change_background(DUAL_WALLPAPER)
     
     print("Installing Software..")
     for path in INSTALLERS:
@@ -119,5 +133,5 @@ def main():
     
     print("Finished!")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

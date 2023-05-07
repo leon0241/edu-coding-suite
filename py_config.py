@@ -1,5 +1,8 @@
-# WALLPAPER = ""M:\Documents\GitHub\edu-coding-suite\reimuwide.png""
-WALLPAPER = "M:/Documents/GitHub/edu-coding-suite/snorlax.jpg"
+# If a second wallpaper is specified then that will be used for double monitors
+WALLPAPERS = [
+    "M:/Documents/GitHub/edu-coding-suite/snorlax.jpg",
+    "M:/Documents/GitHub/edu-coding-suite/reimuwide.png",
+]
 
 # THIS ONE IS A RELATIVE LINK
 PATHED_LOC = "Gtools/pathed"
@@ -15,7 +18,8 @@ INSTALLERS = {
     "flux": "M:/Software/installers/flux-setup.exe",
     "github": "M:/Software/installers/github-setup.exe",
     "obsidian": "M:/Software/installers/obsidian-setup.exe",
-    "rainmeter": "M:/Software/Rainmeter/Rainmeter.exe",
+    # "rainmeter": "M:/Software/Rainmeter/Rainmeter.exe",
+    "TinyTeX": "M:/Software/installers/install-bin-windows.bat",
 }
 
 PORTABLE_GIT = "M:/Software/installers/portablegit.exe"
