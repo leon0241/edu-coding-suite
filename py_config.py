@@ -1,5 +1,5 @@
-# WALLPAPER = "M:/My Pictures/reimuwide.png"
-WALLPAPER = "M:/My Pictures/snorlax.png"
+# WALLPAPER = ""M:\Documents\GitHub\edu-coding-suite\reimuwide.png""
+WALLPAPER = "M:/Documents/GitHub/edu-coding-suite/snorlax.jpg"
 
 # THIS ONE IS A RELATIVE LINK
 PATHED_LOC = "Gtools/pathed"
@@ -16,7 +16,6 @@ INSTALLERS = {
     "github": "M:/Software/installers/github-setup.exe",
     "obsidian": "M:/Software/installers/obsidian-setup.exe",
     "rainmeter": "M:/Software/Rainmeter/Rainmeter.exe",
-    "TinyTeX": "M:/Software/installers/install-bin-windows.bat"
 }
 
 PORTABLE_GIT = "M:/Software/installers/portablegit.exe"
