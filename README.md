@@ -1,4 +1,4 @@
-### Portable suite for Edinburgh University computers
+# Customisable portable suite for UoE Windows computers
 
 Features:
 - Set wallpaper (Dual and single monitors)
