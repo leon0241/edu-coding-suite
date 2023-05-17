@@ -1,5 +1,5 @@
 # If a second wallpaper is specified then that will be used for double monitors
-WALLPAPERS = [
+WALLPAPER = [
     "M:/Documents/GitHub/edu-coding-suite/snorlax.jpg",
     "M:/Documents/GitHub/edu-coding-suite/reimuwide.png",
 ]

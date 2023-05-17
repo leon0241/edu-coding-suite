@@ -5,7 +5,6 @@ from pathlib import Path
 import shutil
 
 import screeninfo
-print()
 
 # config variables
 import py_config
@@ -85,7 +84,7 @@ def posix_to_win_str(path: str):
         raise Exception("Cannot transform file with path " + path)
 
 # if there are two wallpapers listed then set them individually
-if len(py_config.WALLPAPER == 2):
+if len(py_config.WALLPAPER) == 2:
     SINGLE_WALLPAPER = transform_path(py_config.WALLPAPER[0])
     DUAL_WALLPAPER = transform_path(py_config.WALLPAPER[1])
 # if there is only one wallpaper then set them both to the same one
