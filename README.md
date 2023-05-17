@@ -4,7 +4,7 @@ Features:
 - Set wallpaper (Dual and single monitors)
 - Extract files to a location
 - Set local PATH variables
-- Run installers
+- Run installers of software (only ones that install into AppData)
 
 #### Instructions
 - Modify `py_config.py` to your liking
@@ -29,6 +29,7 @@ Features:
 
 #### Links to basic functions
 Portable Python - [WinPython](https://winpython.github.io/)
+*Note: `screeninfo` package is required for python*
 
 Pre-configued Python - [Link to Mega](https://mega.nz/file/WkpRmLCR#TV_mWNQhR6Jzn3hX_FGwCrHDcaiD81RQxHm_HLSksIQ)
 
